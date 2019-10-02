@@ -66,8 +66,8 @@ SummarizedData <- data %>%
 
 
 # write results , remove unnecessary files and r objects
-write.table(data, 'FinalData.txt')
-write.table(SummarizedData, 'SummarizedData.txt')
+write.table(data, 'FinalData.txt',row.name=FALSE)
+write.table(SummarizedData, 'SummarizedData.txt',row.name=FALSE)
 unlink('UCI HAR Dataset', recursive=TRUE)
 file.remove(filename)
 rm(list=ls())
